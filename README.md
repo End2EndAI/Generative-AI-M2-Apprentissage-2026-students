@@ -16,10 +16,19 @@ Welcome to the Generative AI module of the Master 2 (work-study program) at Daup
 | **Hackathon** | 12h | Free team project (groups of 2-3) over 1.5 days: ideate → build → demo |
 | **Presentations** | 3h | Each group pitches + demos; peer evaluation |
 
+## Resources
+
+| Resource | Description |
+|----------|-------------|
+| `resources/Generative_AI_Course_IASD_Apprentissage_2026.pptx` | Full lecture slides — LLM theory (embeddings, Transformers, RAG, agents, MCP) |
+| `resources/Introduction_slides_for_TD_project.pptx` | Lab & project intro slides — **read this before starting any TD** |
+| `resources/setup_guide.md` | Step-by-step environment setup guide — **read this before starting any TD** |
+
 ## Quick start
 
-1. Follow `resources/setup_guide.md` to configure your environment.
+1. Read `resources/Introduction_slides_for_TD_project.pptx` and `resources/setup_guide.md` before starting any lab.
 2. Open `notebooks/getting_started.ipynb` to verify that your setup works.
+3. Start with `notebooks/TD1_embeddings/`.
 
 ## Repository structure
 
