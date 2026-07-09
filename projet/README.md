@@ -79,10 +79,42 @@ anything up or changing anything?"* — Yes → it's just an LLM call (not a pro
 Everything lives in the **`projet/` folder of your group repo**:
 
 - a working **POC** (runs end-to-end);
-- a short **live demo** (shown at the presentation);
-- a **pitch** (slides): the problem, your solution, why an agent, a demo;
+- a **debug mode in the UI** — **required** — that exposes the agent's actions live: **the LLM's reasoning
+  between steps, each tool call with its arguments, and each tool's output**. It's your instrument for
+  *showing* the loop during the demo;
+- a short **live demo** (shown at the presentation) — run it with the **debug mode ON**;
+- a **pitch** (slides): follow the structure below;
 - a **clean repo**: **no API key committed**, a `requirements.txt`, and a `README.md` with clear run
   instructions.
+
+### Pitch structure (5 min sharp)
+
+Cover these items in this order. Use this list **now** as a self-check — if you can't fill one of them
+convincingly, that's a gap to fix this morning, not on stage.
+
+1. **Context** — who the user is, what world they operate in.
+2. **Problem** — what's broken/painful today. One concrete sentence.
+3. **Solution** — what your app does, from the user's perspective (not the code).
+4. **The agent** — where's the *reason → act → observe* loop? Where does the LLM make a real choice? What
+   tools does the agent have at its disposal?
+5. **Why an agent, not a workflow** — give **one concrete input from your own flow** where a fixed pipeline
+   would fail, and how the agent recovers/adapts. *Example: "5 days in Kyoto for a family of 4, mid-budget,
+   temples & food" — the agent drafts a day-by-day plan, then queries the weather and observes 2 rainy days
+   ahead. It swaps outdoor temple hikes for covered markets and museums on those days and moves the outdoor
+   slots to the dry ones, instead of returning a plan that gets rained out.*
+6. **Live demo** — run the flow with your **debug mode on**. The loop, tool calls, and reasoning must be
+   visible on screen. This *is* the proof of item 5.
+
+> **Reality check for this morning:** what matters isn't *how many turns* your loop runs — it's *who
+> decides the next step*. An **agent** = **the LLM sees each result of a turn and decides whether to retry (or not),
+> with which tool (or not), with what args (or not)** — even if 90% of inputs resolve in 2 turns. A
+> **workflow** = the branching could be a Python `if`.
+>
+> If item 5 falls flat — if you can't point to a choice that couldn't be hardcoded — your project is a
+> workflow disguised as an agent. Fix that **before** polishing the UI: add a real decision point
+> (retry-on-failure, branch-on-observation, iterate-to-hit-a-constraint, choose-between-tools).
+
+Budget: ~40–50 s per item + ~1 min demo. Depth beats coverage — cut ruthlessly.
 
 ---
 
