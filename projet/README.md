@@ -83,7 +83,7 @@ Everything lives in the **`projet/` folder of your group repo**:
   between steps, each tool call with its arguments, and each tool's output**. It's your instrument for
   *showing* the loop during the demo;
 - a short **live demo** (shown at the presentation) — run it with the **debug mode ON**;
-- a **pitch** (slides): follow the structure below;
+- a **pitch** (slides optional, if valuable): follow the structure below;
 - a **clean repo**: **no API key committed**, a `requirements.txt`, and a `README.md` with clear run
   instructions.
 
